@@ -27,15 +27,29 @@ function r_recipe_options_mb($post){
 	</div>
 	<div class="form-group">
 	    <label>Utensils</label>
-	    <input type="text" class="form-control" name="r_inputUtensils" value="<?php echo $recipe_data['untensils'] ?> ">
+	    <input type="text" class="form-control" name="r_inputUtensils" value="<?php echo $recipe_data['utensils'] ?> ">
 	</div>
 	<div class="form-group">
 	    <label>Cooking Experience</label>
-	    <select class="form-control" name="r_inputLevel">
+	    <select class="form-control selectpicker" name="r_inputLevel">
 	        <option value="Beginner">Beginner</option>
 	        <option value="Intermediate" <?php echo $recipe_data['level'] == "Intermediate" ? "SELECTED" : ""; ?>>Intermediate</option>
 	        <option value="Expert" <?php echo $recipe_data['level'] == "Expert" ? "SELECTED" : ""; ?>>Expert</option>
 	    </select>
+	</div>
+	<div class="form-group">
+	    <label>Select Stores</label>
+	    <select multiple class="form-control selectpicker" name="r_inputLevel" data-container="body" data-live-search="true" title="Select Stores" data-hide-disabled="true" >
+	        <option value="Beginner">Beginner</option>
+	        <option value="Intermediate" <?php echo $recipe_data['level'] == "Intermediate" ? "SELECTED" : ""; ?>>Intermediate</option>
+	        <option value="Expert" <?php echo $recipe_data['level'] == "Expert" ? "SELECTED" : ""; ?>>Expert</option>
+	    </select>
+
+	    <!-- <select multiple class="selectpicker form-control" id="number-multiple" data-container="body" data-live-search="true" title="Select a number" data-hide-disabled="true" data-actions-box="true" data-virtual-scroll="false">
+	    	<option value="Beginner">Beginner</option>
+	        <option value="Intermediate" <?php echo $recipe_data['level'] == "Intermediate" ? "SELECTED" : ""; ?>>Intermediate</option>
+	        <option value="Expert" <?php echo $recipe_data['level'] == "Expert" ? "SELECTED" : ""; ?>>Expert</option>
+	    </select> -->
 	</div>
 	<div class="form-group">
 	    <label>Meal Type</label>
